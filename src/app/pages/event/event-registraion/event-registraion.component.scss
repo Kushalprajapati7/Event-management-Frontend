@@ -1,0 +1,27 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #007bff;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  

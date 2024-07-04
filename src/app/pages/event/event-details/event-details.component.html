@@ -1,0 +1,51 @@
+<div class="container mt-4" *ngIf="event">
+    <div class="content-header d-flex justify-content-between align-items-center mb-3">
+        <h2>{{ event.name }}</h2>
+        <div>
+            <button *ngIf="canEdit" class="btn btn-warning me-2" (click)="updateEvent(event)">
+                <i class="fa-solid fa-file-pen"></i> Update
+            </button>
+            <button *ngIf="canDelete" class="btn btn-danger" (click)="deleteEvent(event)">
+                <i class="fa-solid fa-trash-can"></i> Delete
+            </button>
+        </div>
+    </div>
+
+    <div class="content-body">
+        <p>{{ event.description }}</p>
+        <p class="text-muted small">
+            <i class="fa-solid fa-map-marker-alt"></i> Location: {{ event.location }}
+        </p>
+        <p class="text-muted small">
+            <i class="fa-solid fa-clock"></i> Date: {{ event.date | date: 'medium' }}
+        </p>
+        <p class="text-muted small">Uploaded at: {{ event.createdAt | date: 'medium' }}</p>
+    </div>
+
+    <button class="btn btn-register" (click)="eventRegistration(event._id)">
+        <i class="fa-solid fa-check"></i> Register Here
+    </button>
+
+    <div *ngIf="isAdmin">
+
+        <div *ngIf="registrations.length" class="registered-users">
+            <h3>Registered Users</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let registration of registrations; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ registration.username }}</td>
+                        <td>{{ registration.email }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

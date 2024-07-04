@@ -1,0 +1,85 @@
+
+$primary-color: #36c753; // Lighter shade of green
+$secondary-color: #06D001;
+$hover-color: #09A603;
+
+.container-fluid {
+  margin-top: 4rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .event-item {
+    background-color: $primary-color;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: translateY(-5px);
+      background-color: $hover-color;
+    }
+
+    .event-details {
+      color: #ffffff;
+
+      h5 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+
+        i {
+          margin-right: 8px;
+        }
+      }
+
+      .text-muted {
+        opacity: 0.8;
+      }
+
+      .read-more {
+        display: inline-block;
+        color: #ffffff;
+        text-decoration: none;
+        margin-top: 10px;
+
+        i {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .btn-add-event {
+    background-color: $secondary-color;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}

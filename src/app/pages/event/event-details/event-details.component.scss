@@ -1,0 +1,89 @@
+.container {
+    margin-top: 4rem;
+  
+    .content-header {
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+  
+      h2 {
+        font-size: 2rem;
+        color: #059212; /* Green from the palette */
+      }
+  
+      .btn {
+        &.btn-warning {
+          background-color: #9bec00; /* Light green from the palette */
+          color: white;
+          border-color: #9bec00;
+          transition: all 0.3s ease;
+  
+          &:hover {
+            background-color: #7eb400; /* Darker shade of green */
+            border-color: #7eb400;
+          }
+        }
+  
+        
+      }
+    }
+  
+    .content-body {
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  
+    .btn-register {
+      background-color: #06d001; /* Green from the palette */
+      color: white;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #05a800; /* Darker shade of green */
+      }
+    }
+  
+    .registered-users {
+      margin-top: 4rem;
+  
+      h3 {
+        font-size: 1.5rem;
+        color: #212121; /* Black or near black for headings */
+        margin-bottom: 1.5rem;
+      }
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+  
+        th {
+          background-color: #9bec00; /* Light green for table header */
+          color: white;
+          padding: 0.75rem;
+          text-align: left;
+  
+          &:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+          }
+  
+          &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
+  
+        td {
+          padding: 0.75rem;
+          border-bottom: 1px solid #dee2e6; /* Light grey border */
+        }
+  
+        .fa-solid {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  
