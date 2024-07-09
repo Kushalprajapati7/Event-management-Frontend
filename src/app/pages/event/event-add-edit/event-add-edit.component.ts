@@ -62,7 +62,6 @@ export class EventAddEditComponent implements OnInit {
     }
     this.eventService.createEvent(event).subscribe(
       response => {
-        console.log(response,"event");
         Swal.fire({
           position: "center",
           icon: "success",
@@ -106,7 +105,6 @@ export class EventAddEditComponent implements OnInit {
           description: event.description,
           date: new Date(event.date),
           location: event.location,
-          // Patch more fields as needed
         });
       },
       error => {

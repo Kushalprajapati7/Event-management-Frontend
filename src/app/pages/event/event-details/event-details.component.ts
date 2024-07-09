@@ -88,7 +88,6 @@ export class EventDetailsComponent implements OnInit {
   }
 
   eventRegistration(eventId: string) {
-    // this.router.navigate(['event/register-event', eventId]);
     if (this.userId) {
       this.eventService.registerUser(eventId, this.userId).subscribe(
         response => {

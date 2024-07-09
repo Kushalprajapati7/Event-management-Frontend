@@ -19,8 +19,6 @@ export class LoginComponent implements OnInit {
             email: ['', [Validators.required, Validators.email]],
             password: ['', [Validators.required]]
         })
-
-        // this.onSubmit();
     }
 
     onSubmit() {
